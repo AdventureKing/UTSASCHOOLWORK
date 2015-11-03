@@ -1,0 +1,123 @@
+NOTE: I will be omiting parts 3 and 4 since i did not complete this assignment. We already dicussed through email that i was sick the week this was gonna turn this in. I showed you my doctors note and all that. these test cases will be for the first two parts of the assignment
+
+
+
+
+Part1: getfiles.sh
+
+
+Test case 1: the input file is not existing.
+
+
+Result: pass
+
+
+Test case 2: the input directory is not existing.
+
+
+Result: pass
+
+
+Test case 3: the user has entered 2 parameters the command script and a input.
+
+
+Result: pass
+
+Test case 4: the input file is existing.
+
+
+Result: pass
+
+
+Test case 5: the input file is existing. And output absolute path to output.txt
+
+
+Result: pass
+
+Test case 6: the input is a directory.
+
+
+Result: pass
+
+Test case 7: the input directory is existing.
+
+
+Result: pass
+
+Test case 8: the input directory is existing.And output all filepaths to files to output.txt
+
+
+Result: pass
+Test case 9: the input is a directory and is existing and output holds multipul file paths and they are each on one line aka seprated by a new line character
+
+
+Result: pass
+Test case 10: the input directory has subdirectories that have files in them, that need to be put into output
+
+
+Result: pass
+
+
+
+SO FAR I SHOULD HAVE  A 25 CAUSE I PASSED ALL MY OWN TEST CASES.
+
+
+
+Part2:wordcount.sh 
+
+
+Test case 1: the input file is not existing.
+
+
+Result: pass
+
+
+Test case 2: the input does not have enough arguments.
+
+
+Result: pass
+
+Test case 3: the input is a file.
+
+
+Result: pass
+
+Test case 4: the input file has words in it.
+
+
+Result: pass
+
+Test case 5: the input file separates words by spaces.
+
+
+Result: fail
+
+
+Test case 6: the output file takes words like we're, and brain-dead and chomps everything after the ' or -.
+
+
+Result: fail
+
+Test case 7: the input files words are correctly counted.
+
+
+Result: fail
+
+Test case 8: the ouput is correctly formated.
+
+
+Result: fail
+
+Test case 9: Program can run large files more than 45 words.
+
+
+Result: fail. crashes
+
+Test case 10: Total amount of words printed to output is correct.
+
+
+Result: fail
+
+
+
+This was the part of my assignment that suffered the most and it shows. These were the test cases i ran for part2 and some file formats cause it to act erradic and its apparent.

@@ -1,0 +1,451 @@
+/home/tfv024/courses/xswap
+/home/tfv024/courses/datastructures/recti/hilo
+/home/tfv024/courses/datastructures/recti/random.c
+/home/tfv024/courses/datastructures/recti/hilo.c
+/home/tfv024/courses/datastructures/recti/sortmerge.c
+/home/tfv024/courses/datastructures/recti/stringpointerarithmetic.zip
+/home/tfv024/courses/datastructures/recti/xsortmerge
+/home/tfv024/courses/datastructures/recti/struct.c~
+/home/tfv024/courses/datastructures/recti/Makefile
+/home/tfv024/courses/datastructures/recti/xstruct
+/home/tfv024/courses/datastructures/recti/struct.c
+/home/tfv024/courses/datastructures/recti/strings_test_cases.txt
+/home/tfv024/courses/datastructures/recti/xstring
+/home/tfv024/courses/datastructures/recti/strings.c
+/home/tfv024/courses/datastructures/recti/stringpointerarithmetic/strings_test_cases.txt
+/home/tfv024/courses/datastructures/recti/stringpointerarithmetic/strings.c
+/home/tfv024/courses/datastructures/recti/sortmergeoutput
+/home/tfv024/courses/datastructures/recti/randtest.o
+/home/tfv024/courses/datastructures/recti/randtest
+/home/tfv024/courses/datastructures/recti/randtest.c
+/home/tfv024/courses/datastructures/recti/recti1.c.zip
+/home/tfv024/courses/datastructures/recti/word.c
+/home/tfv024/courses/datastructures/recti/\
+/home/tfv024/courses/datastructures/recti/hilo.o
+/home/tfv024/courses/datastructures/recti/random.h
+/home/tfv024/courses/datastructures/recti/random.o
+/home/tfv024/courses/datastructures/recti/recti1.c/sortmerge.c
+/home/tfv024/courses/datastructures/recti/recti1.c/sortmergeoutput
+/home/tfv024/courses/datastructures/work/random.c
+/home/tfv024/courses/datastructures/work/simpio.h
+/home/tfv024/courses/datastructures/work/exception.c
+/home/tfv024/courses/datastructures/work/graphics.c
+/home/tfv024/courses/datastructures/work/sortmerge.c
+/home/tfv024/courses/datastructures/work/strlib.h
+/home/tfv024/courses/datastructures/work/strlib.c
+/home/tfv024/courses/datastructures/work/stack.o
+/home/tfv024/courses/datastructures/work/rpncalc
+/home/tfv024/courses/datastructures/work/Makefile
+/home/tfv024/courses/datastructures/work/genlib.c
+/home/tfv024/courses/datastructures/work/graphics.h
+/home/tfv024/courses/datastructures/work/testscan
+/home/tfv024/courses/datastructures/work/testscan.o
+/home/tfv024/courses/datastructures/work/scanadt.c
+/home/tfv024/courses/datastructures/work/simpio.c
+/home/tfv024/courses/datastructures/work/genlib.o
+/home/tfv024/courses/datastructures/work/exception.o
+/home/tfv024/courses/datastructures/work/rpncalc.c
+/home/tfv024/courses/datastructures/work/gccx
+/home/tfv024/courses/datastructures/work/stack.c
+/home/tfv024/courses/datastructures/work/simpio.o
+/home/tfv024/courses/datastructures/work/testscan.c
+/home/tfv024/courses/datastructures/work/genlib.h
+/home/tfv024/courses/datastructures/work/graphics.o
+/home/tfv024/courses/datastructures/work/scanadt.o
+/home/tfv024/courses/datastructures/work/rpncalc.o
+/home/tfv024/courses/datastructures/work/stack.h
+/home/tfv024/courses/datastructures/work/gcalloc.h
+/home/tfv024/courses/datastructures/work/strlib.o
+/home/tfv024/courses/datastructures/work/random.h
+/home/tfv024/courses/datastructures/work/random.o
+/home/tfv024/courses/datastructures/work/arrayP/print.c
+/home/tfv024/courses/datastructures/work/arrayP/xp1
+/home/tfv024/courses/datastructures/work/arrayP/pair.c~
+/home/tfv024/courses/datastructures/work/arrayP/sum.c
+/home/tfv024/courses/datastructures/work/arrayP/xpair
+/home/tfv024/courses/datastructures/work/arrayP/xsum
+/home/tfv024/courses/datastructures/work/arrayP/\
+/home/tfv024/courses/datastructures/work/arrayP/pair.c
+/home/tfv024/courses/datastructures/work/scanadt.h
+/home/tfv024/courses/datastructures/work/exception.h
+/home/tfv024/courses/datastructures/class/.vimrc
+/home/tfv024/courses/datastructures/class/hw08/hw08
+/home/tfv024/courses/datastructures/class/hw08/makefile~
+/home/tfv024/courses/datastructures/class/hw08/hw-08-binary-search-tree-not-balanced.pdf
+/home/tfv024/courses/datastructures/class/hw08/buffer.o
+/home/tfv024/courses/datastructures/class/hw08/driver.o
+/home/tfv024/courses/datastructures/class/hw08/MakeFile~
+/home/tfv024/courses/datastructures/class/hw08/buffer.c
+/home/tfv024/courses/datastructures/class/hw08/driver.c~
+/home/tfv024/courses/datastructures/class/hw08/makefile
+/home/tfv024/courses/datastructures/class/hw08/backup/hw-08-binary-search-tree-not-balanced.pdf
+/home/tfv024/courses/datastructures/class/hw08/backup/buffer.o
+/home/tfv024/courses/datastructures/class/hw08/backup/driver.o
+/home/tfv024/courses/datastructures/class/hw08/backup/buffer.c
+/home/tfv024/courses/datastructures/class/hw08/backup/driver.c~
+/home/tfv024/courses/datastructures/class/hw08/backup/makefile
+/home/tfv024/courses/datastructures/class/hw08/backup/buffer.c~
+/home/tfv024/courses/datastructures/class/hw08/backup/buffer.h~
+/home/tfv024/courses/datastructures/class/hw08/backup/buffer.h
+/home/tfv024/courses/datastructures/class/hw08/backup/driver.c
+/home/tfv024/courses/datastructures/class/hw08/buffer.c~
+/home/tfv024/courses/datastructures/class/hw08/buffer.h~
+/home/tfv024/courses/datastructures/class/hw08/buffer.h
+/home/tfv024/courses/datastructures/class/hw08/driver.c
+/home/tfv024/courses/datastructures/class/employee.c~
+/home/tfv024/courses/datastructures/class/hw05/exception.c
+/home/tfv024/courses/datastructures/class/hw05/hw05
+/home/tfv024/courses/datastructures/class/hw05/stack.o
+/home/tfv024/courses/datastructures/class/hw05/Makefile
+/home/tfv024/courses/datastructures/class/hw05/genlib.c
+/home/tfv024/courses/datastructures/class/hw05/html.o
+/home/tfv024/courses/datastructures/class/hw05/html.c
+/home/tfv024/courses/datastructures/class/hw05/sample1.html~
+/home/tfv024/courses/datastructures/class/hw05/genlib.o
+/home/tfv024/courses/datastructures/class/hw05/exception.o
+/home/tfv024/courses/datastructures/class/hw05/stack.c
+/home/tfv024/courses/datastructures/class/hw05/stack.h~
+/home/tfv024/courses/datastructures/class/hw05/sample2.html~
+/home/tfv024/courses/datastructures/class/hw05/html.c~
+/home/tfv024/courses/datastructures/class/hw05/genlib.h
+/home/tfv024/courses/datastructures/class/hw05/sample2.html
+/home/tfv024/courses/datastructures/class/hw05/stack.h
+/home/tfv024/courses/datastructures/class/hw05/sample1.html
+/home/tfv024/courses/datastructures/class/hw05/stack.c~
+/home/tfv024/courses/datastructures/class/hw05/Makefile~
+/home/tfv024/courses/datastructures/class/hw05/gcalloc.h
+/home/tfv024/courses/datastructures/class/hw05/hw05.o
+/home/tfv024/courses/datastructures/class/hw05/exception.h
+/home/tfv024/courses/datastructures/class/hw3.c~
+/home/tfv024/courses/datastructures/class/hw07.zip
+/home/tfv024/courses/datastructures/class/link/insert.c
+/home/tfv024/courses/datastructures/class/link/insert.c~
+/home/tfv024/courses/datastructures/class/link/insert
+/home/tfv024/courses/datastructures/class/employee11.c~
+/home/tfv024/courses/datastructures/class/otherprojects/fgets.c
+/home/tfv024/courses/datastructures/class/otherprojects/xstrlen
+/home/tfv024/courses/datastructures/class/otherprojects/xword
+/home/tfv024/courses/datastructures/class/otherprojects/employee.o
+/home/tfv024/courses/datastructures/class/otherprojects/xsudoku
+/home/tfv024/courses/datastructures/class/otherprojects/employee
+/home/tfv024/courses/datastructures/class/otherprojects/Makefile
+/home/tfv024/courses/datastructures/class/otherprojects/hangman.zip
+/home/tfv024/courses/datastructures/class/otherprojects/hw3.c
+/home/tfv024/courses/datastructures/class/otherprojects/xsortmerge.c
+/home/tfv024/courses/datastructures/class/otherprojects/xemployee
+/home/tfv024/courses/datastructures/class/otherprojects/sudoku.c
+/home/tfv024/courses/datastructures/class/otherprojects/xstrcpy
+/home/tfv024/courses/datastructures/class/otherprojects/word.c
+/home/tfv024/courses/datastructures/class/otherprojects/employee output
+/home/tfv024/courses/datastructures/class/otherprojects/employee.c
+/home/tfv024/courses/datastructures/class/otherprojects/xfgets
+/home/tfv024/courses/datastructures/class/otherprojects/strlen.c
+/home/tfv024/courses/datastructures/class/otherprojects/strcpy.c
+/home/tfv024/courses/datastructures/class/hw07/Makefile
+/home/tfv024/courses/datastructures/class/hw07/output
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/dlib-editor
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/editor.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/simpio.h
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/ddlistbuf.c~
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stackbuf.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/listbuf.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stack.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/Makefile
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/dlibbuf.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/dlibbuf.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/arraybuf.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/simpio.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/array-editor
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stack.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stackbuf.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/editor.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stack-editor
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/ddlistbuf.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/stack.h
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/arraybuf.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/ddlist-editor
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/ddlistbuf.o
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/Makefile~
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/buffer.h~
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/buffer.h
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/listbuf.c
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/list-editor
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/dlibbuf.c~
+/home/tfv024/courses/datastructures/class/hw07/09-Efficiency-and-ADTs/editor.c~
+/home/tfv024/courses/datastructures/class/hw07/hw-07-ddl-b-array-ex13.pdf
+/home/tfv024/courses/datastructures/class/hw07/output~
+/home/tfv024/courses/datastructures/class/hw07/.pdf
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib.sh
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/random.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/simpio.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/exception.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/graphics.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/strlib.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/strlib.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/Makefile
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/genlib.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/graphics.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/simpio.c
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/genlib.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/cslib.a
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/exception.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/gccx
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/simpio.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/genlib.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/graphics.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/.bashrc.swp
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/gcalloc.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/strlib.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/random.h
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/random.o
+/home/tfv024/courses/datastructures/class/hw07/cslibInstall/cslib/exception.h
+/home/tfv024/courses/datastructures/class/hw07/Makefile~
+/home/tfv024/courses/datastructures/class/hw06/set.h~
+/home/tfv024/courses/datastructures/class/hw06/exception.c
+/home/tfv024/courses/datastructures/class/hw06/set.h
+/home/tfv024/courses/datastructures/class/hw06/Makefile
+/home/tfv024/courses/datastructures/class/hw06/genlib.c
+/home/tfv024/courses/datastructures/class/hw06/driver_array
+/home/tfv024/courses/datastructures/class/hw06/driver.o
+/home/tfv024/courses/datastructures/class/hw06/genlib.o
+/home/tfv024/courses/datastructures/class/hw06/setArrayImp.o
+/home/tfv024/courses/datastructures/class/hw06/exception.o
+/home/tfv024/courses/datastructures/class/hw06/setLinkedListImp.c
+/home/tfv024/courses/datastructures/class/hw06/driver.c~
+/home/tfv024/courses/datastructures/class/hw06/setArrayImp.c
+/home/tfv024/courses/datastructures/class/hw06/genlib.h
+/home/tfv024/courses/datastructures/class/hw06/setArrayImpl.c~
+/home/tfv024/courses/datastructures/class/hw06/setArrayImpl.c
+/home/tfv024/courses/datastructures/class/hw06/setLinkedListImpl.c~
+/home/tfv024/courses/datastructures/class/hw06/Makefile~
+/home/tfv024/courses/datastructures/class/hw06/gcalloc.h
+/home/tfv024/courses/datastructures/class/hw06/setLinkedListImp.o
+/home/tfv024/courses/datastructures/class/hw06/driver.c
+/home/tfv024/courses/datastructures/class/hw06/exception.h
+/home/tfv024/courses/datastructures/class/turnins/hw2/wordoutput.c
+/home/tfv024/courses/datastructures/class/turnins/hw2/wordoutput.c~
+/home/tfv024/courses/datastructures/class/turnins/hw2/word.c
+/home/tfv024/courses/datastructures/class/turnins/hw03/employee.c~
+/home/tfv024/courses/datastructures/class/turnins/hw03/employee output
+/home/tfv024/courses/datastructures/class/turnins/hw03/employee.c
+/home/tfv024/courses/datastructures/class/turnins/sudoku turn in.zip
+/home/tfv024/courses/datastructures/class/turnins/hw03.zip
+/home/tfv024/courses/datastructures/class/turnins/hw2.zip
+/home/tfv024/courses/datastructures/class/turnins/sudoku turn in/sudoku run~
+/home/tfv024/courses/datastructures/class/turnins/sudoku turn in/sudoku run
+/home/tfv024/courses/datastructures/class/turnins/sudoku turn in/sudoku.c
+/home/tfv024/courses/datastructures/class/turnins/sudoku turn in/sudoku.c~
+/home/tfv024/courses/datastructures/class/hangman/help.c
+/home/tfv024/courses/datastructures/class/hangman/hw04.o
+/home/tfv024/courses/datastructures/class/hangman/hangman.c
+/home/tfv024/courses/datastructures/class/hangman/Makefile
+/home/tfv024/courses/datastructures/class/hangman/hw04
+/home/tfv024/courses/datastructures/class/hangman/xhelp
+/home/tfv024/courses/datastructures/class/hangman/hangman.o
+/home/tfv024/courses/datastructures/class/hangman/randword.o
+/home/tfv024/courses/datastructures/class/hangman/randword.c~
+/home/tfv024/courses/datastructures/class/hangman/randword.h
+/home/tfv024/courses/datastructures/class/hangman/input.txt
+/home/tfv024/courses/datastructures/class/hangman/input.txt~
+/home/tfv024/courses/datastructures/class/hangman/hangman.c~
+/home/tfv024/courses/datastructures/class/hangman/randword.c
+/home/tfv024/courses/datastructures/class/hangman/Makefile~
+/home/tfv024/courses/datastructures/class/hangman/randword.h~
+/home/tfv024/courses/datastructures/class/testpractice/Makefile
+/home/tfv024/courses/datastructures/class/testpractice/driver.o
+/home/tfv024/courses/datastructures/class/testpractice/xdriver
+/home/tfv024/courses/datastructures/class/testpractice/ran.h~
+/home/tfv024/courses/datastructures/class/testpractice/driver.c~
+/home/tfv024/courses/datastructures/class/testpractice/ran.c
+/home/tfv024/courses/datastructures/class/testpractice/ran.o
+/home/tfv024/courses/datastructures/class/testpractice/ran.c~
+/home/tfv024/courses/datastructures/class/testpractice/Makefile~
+/home/tfv024/courses/datastructures/class/testpractice/driver.c
+/home/tfv024/courses/datastructures/class/testpractice/ran.h
+/home/tfv024/courses/datastructures/class/sudoku.c~
+/home/tfv024/courses/datastructures/class/hw08.zip
+/home/tfv024/courses/datastructures/class/driver.c
+/home/tfv024/courses/datastructures/class/hw05.zip
+/home/tfv024/courses/datastructures/.sortmerge.c.swp
+/home/tfv024/courses/datastructures/cslibInstall/cslib.sh
+/home/tfv024/courses/datastructures/cslibInstall/cslib.a
+/home/tfv024/courses/datastructures/cslibInstall/cslib/random.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/simpio.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/exception.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/graphics.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/strlib.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/strlib.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/Makefile
+/home/tfv024/courses/datastructures/cslibInstall/cslib/genlib.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/graphics.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/simpio.c
+/home/tfv024/courses/datastructures/cslibInstall/cslib/genlib.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/.bashrc.swp
+/home/tfv024/courses/datastructures/cslibInstall/cslib/gcalloc.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/random.h
+/home/tfv024/courses/datastructures/cslibInstall/cslib/exception.h
+/home/tfv024/courses/datastructures/stack.c
+/home/tfv024/courses/datastructures/stack.h~
+/home/tfv024/courses/datastructures/stack.c~
+/home/tfv024/courses/datastructures/Makefile~
+/home/tfv024/courses/data/hw3/queue.c~
+/home/tfv024/courses/data/hw3/Evaluation~
+/home/tfv024/courses/data/hw3/queue.h
+/home/tfv024/courses/data/hw3/data.txt~
+/home/tfv024/courses/data/hw3/Evaluation
+/home/tfv024/courses/data/hw3/assignment3.pdf
+/home/tfv024/courses/data/hw3/xhw3
+/home/tfv024/courses/data/hw3/linked list/queue.c~
+/home/tfv024/courses/data/hw3/linked list/queue.h
+/home/tfv024/courses/data/hw3/linked list/data.txt~
+/home/tfv024/courses/data/hw3/linked list/assignment3.pdf
+/home/tfv024/courses/data/hw3/linked list/xhw3
+/home/tfv024/courses/data/hw3/linked list/data.txt
+/home/tfv024/courses/data/hw3/linked list/main.c
+/home/tfv024/courses/data/hw3/linked list/queue.c
+/home/tfv024/courses/data/hw3/linked list/queue.h~
+/home/tfv024/courses/data/hw3/linked list/main.c~
+/home/tfv024/courses/data/hw3/Double linked/queue.c~
+/home/tfv024/courses/data/hw3/Double linked/queue.h
+/home/tfv024/courses/data/hw3/Double linked/data.txt~
+/home/tfv024/courses/data/hw3/Double linked/assignment3.pdf
+/home/tfv024/courses/data/hw3/Double linked/maindouble.c
+/home/tfv024/courses/data/hw3/Double linked/xhw3
+/home/tfv024/courses/data/hw3/Double linked/queuedouble.c
+/home/tfv024/courses/data/hw3/Double linked/data.txt
+/home/tfv024/courses/data/hw3/Double linked/maindouble.c~
+/home/tfv024/courses/data/hw3/Double linked/queuedouble.c~
+/home/tfv024/courses/data/hw3/Double linked/queue.h~
+/home/tfv024/courses/data/hw3/data.txt
+/home/tfv024/courses/data/hw3/main.c
+/home/tfv024/courses/data/hw3/queue.c
+/home/tfv024/courses/data/hw3/queue.h~
+/home/tfv024/courses/data/hw3/main.c~
+/home/tfv024/courses/data/hw2/recursion.c
+/home/tfv024/courses/data/hw2/xhw2
+/home/tfv024/courses/data/hw2/data.txt~
+/home/tfv024/courses/data/hw2/stack.c
+/home/tfv024/courses/data/hw2/stack.h~
+/home/tfv024/courses/data/hw2/data.txt
+/home/tfv024/courses/data/hw2/stack.h
+/home/tfv024/courses/data/hw2/assignment2.pdf
+/home/tfv024/courses/data/hw2/main.c
+/home/tfv024/courses/data/hw2/stack.c~
+/home/tfv024/courses/data/hw2/main.c~
+/home/tfv024/courses/data/hw3.zip
+/home/tfv024/courses/data/hw5.tar.gz
+/home/tfv024/courses/data/hw.tar.gz
+/home/tfv024/courses/data/hw7/data1.txt~
+/home/tfv024/courses/data/hw7/data2.txt~
+/home/tfv024/courses/data/hw7/data2.txt
+/home/tfv024/courses/data/hw7/assignment7.pdf
+/home/tfv024/courses/data/hw7/Hash Table/data1.txt~
+/home/tfv024/courses/data/hw7/Hash Table/data1.txt
+/home/tfv024/courses/data/hw7/Hash Table/xhw7
+/home/tfv024/courses/data/hw7/Hash Table/hash.c
+/home/tfv024/courses/data/hw7/Hash Table/hash.h~
+/home/tfv024/courses/data/hw7/Hash Table/data.txt
+/home/tfv024/courses/data/hw7/Hash Table/hash.c~
+/home/tfv024/courses/data/hw7/Hash Table/main.c
+/home/tfv024/courses/data/hw7/Hash Table/hash.h
+/home/tfv024/courses/data/hw7/Hash Table/main.c~
+/home/tfv024/courses/data/classpractice/queue/queue main_skeleton.c~
+/home/tfv024/courses/data/classpractice/queue/xqueue
+/home/tfv024/courses/data/classpractice/queue/queue main_skeleton.c
+/home/tfv024/courses/data/classpractice/Adt/test.c
+/home/tfv024/courses/data/classpractice/Adt/xtest
+/home/tfv024/courses/data/classpractice/Adt/adt_demo.c
+/home/tfv024/courses/data/classpractice/Adt/test. 
+/home/tfv024/courses/data/classpractice/xpalindrome
+/home/tfv024/courses/data/classpractice/trees/main_skeleton(3).c
+/home/tfv024/courses/data/classpractice/trees/huffman code/huffman_skeleton.c~
+/home/tfv024/courses/data/classpractice/trees/huffman code/huffman_skeleton.c
+/home/tfv024/courses/data/classpractice/trees/huffman code/node.c
+/home/tfv024/courses/data/classpractice/trees/huffman code/node.h
+/home/tfv024/courses/data/classpractice/trees/huffman code/__MACOSX/._huffman_skeleton.c
+/home/tfv024/courses/data/classpractice/trees/huffman code/__MACOSX/._node.h
+/home/tfv024/courses/data/classpractice/trees/huffman code/__MACOSX/._node.c
+/home/tfv024/courses/data/classpractice/trees/xmain
+/home/tfv024/courses/data/classpractice/trees/main_skeleton(3).c~
+/home/tfv024/courses/data/classpractice/palindrome.c~
+/home/tfv024/courses/data/classpractice/test.c~
+/home/tfv024/courses/data/classpractice/Stack Class work/xtest
+/home/tfv024/courses/data/classpractice/Stack Class work/node.c
+/home/tfv024/courses/data/classpractice/Stack Class work/stack.c
+/home/tfv024/courses/data/classpractice/Stack Class work/stack.h~
+/home/tfv024/courses/data/classpractice/Stack Class work/node.h
+/home/tfv024/courses/data/classpractice/Stack Class work/data2.txt
+/home/tfv024/courses/data/classpractice/Stack Class work/stack.h
+/home/tfv024/courses/data/classpractice/Stack Class work/main.c
+/home/tfv024/courses/data/classpractice/Stack Class work/stack.c~
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._node.h
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._main.c
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._stack.h
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._node.c
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._stack.c
+/home/tfv024/courses/data/classpractice/Stack Class work/__MACOSX/._data2.txt
+/home/tfv024/courses/data/classpractice/Stack Class work/node.c~
+/home/tfv024/courses/data/classpractice/Stack Class work/main.c~
+/home/tfv024/courses/data/classpractice/palindrome.c
+/home/tfv024/courses/data/hw5/two-way insertion sort/data.txt
+/home/tfv024/courses/data/hw5/two-way insertion sort/xhw5
+/home/tfv024/courses/data/hw5/two-way insertion sort/main.c
+/home/tfv024/courses/data/hw5/quadratic selection sort/sort.h~
+/home/tfv024/courses/data/hw5/quadratic selection sort/data.txt~
+/home/tfv024/courses/data/hw5/quadratic selection sort/sort.c~
+/home/tfv024/courses/data/hw5/quadratic selection sort/data.txt
+/home/tfv024/courses/data/hw5/quadratic selection sort/xhw5
+/home/tfv024/courses/data/hw5/quadratic selection sort/output.txt
+/home/tfv024/courses/data/hw5/quadratic selection sort/main.c
+/home/tfv024/courses/data/hw5/quadratic selection sort/main.c~
+/home/tfv024/courses/data/hw5/part 1
+/home/tfv024/courses/data/hw5/assignment5.pdf
+/home/tfv024/courses/data/hw5/part 1~
+/home/tfv024/courses/data/hw4/assignment4.pdf
+/home/tfv024/courses/data/hw4/tree.h~
+/home/tfv024/courses/data/hw4/tree.h
+/home/tfv024/courses/data/hw4/tree.c
+/home/tfv024/courses/data/hw4/xhw4
+/home/tfv024/courses/data/hw4/tree.c~
+/home/tfv024/courses/data/hw4/main.c
+/home/tfv024/courses/data/hw4/hw
+/home/tfv024/courses/data/hw4/main.c~
+/home/tfv024/courses/data/hw6/assignment6.pdf
+/home/tfv024/courses/data/hw6/xhw6
+/home/tfv024/courses/data/hw6/data.txt~
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/xhw6
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/tree.h~
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/tree.h
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/tree.c
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/tree.c~
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/main.c
+/home/tfv024/courses/data/hw6/Binary Search Tree Performance/main.c~
+/home/tfv024/courses/data/hw6/Dynamic Sequential Insertion search/data.txt
+/home/tfv024/courses/data/hw6/Dynamic Sequential Insertion search/output.txt
+/home/tfv024/courses/data/hw6/Dynamic Sequential Insertion search/main.c
+/home/tfv024/courses/data/hw6/output.txt~
+/home/tfv024/courses/data/hw6/main.c~
+/home/tfv024/courses/data/hw1/data.txt~
+/home/tfv024/courses/data/hw1/hw1.c~
+/home/tfv024/courses/data/hw1/hw1.c
+/home/tfv024/courses/data/hw1/adtstuff.txt
+/home/tfv024/courses/data/hw1/data.txt
+/home/tfv024/courses/data/hw1/xhw1
+/home/tfv024/courses/data/hw1/assignment1%281%29.pdf
+/home/tfv024/courses/data/__MACOSX/._adt_demo.c
+/home/tfv024/courses/data/__MACOSX/._data1.txt
+/home/tfv024/courses/brandon.c
+/home/tfv024/courses/quiz.c~
+/home/tfv024/courses/xquiz
+/home/tfv024/courses/swap.c
+/home/tfv024/courses/brandon
+/home/tfv024/courses/systems/assignments/assign 1/Part 1/getfiles.sh
+/home/tfv024/courses/systems/assignments/assign 1/Part 1/getfiles.sh~
+/home/tfv024/courses/systems/assignments/assign 1/Part 1/output.txt
+/home/tfv024/courses/systems/assignments/assign 1/getfiles.sh
+/home/tfv024/courses/systems/assignments/assign 1/Part 2/wordcount.sh~
+/home/tfv024/courses/systems/assignments/assign 1/Part 2/wordcount.sh
+/home/tfv024/courses/systems/assignments/assign 1/Part 2/output.txt
+/home/tfv024/courses/systems/assignments/assign 1/getfiles.sh~
+/home/tfv024/courses/systems/assignments/assign 1/assign1.pdf
+/home/tfv024/courses/quiz.c

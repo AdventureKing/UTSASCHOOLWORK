@@ -1,0 +1,33 @@
+valgrind ./employee -v
+==4519== Memcheck, a memory error detector.
+==4519== Copyright (C) 2002-2008, and GNU GPL'd, by Julian Seward et al.
+==4519== Using LibVEX rev 1884, a library for dynamic binary translation.
+==4519== Copyright (C) 2004-2008, and GNU GPL'd, by OpenWorks LLP.
+==4519== Using valgrind-3.4.1-Debian, a dynamic binary instrumentation framework.
+==4519== Copyright (C) 2000-2008, and GNU GPL'd, by Julian Seward et al.
+==4519== For more details, rerun with: -v
+==4519== 
+How many employees do you have to enter?:2
+Employee Name (1):brandon
+Title:snows
+Employee Social Security Number:632636332
+Employee's Salary:2.00
+Witholding exemptions:1
+Employee Name (2):badf;
+Title:adfl
+Employee Social Security Number:632636332
+Employee's Salary:2.00
+Witholding exemptions:1
+Name      Gross        Tax       Net         
+--------------------------------------------------
+brandon   2.00       - 0.25    = 1.75        
+badf;     2.00       - 0.25    = 1.75        
+****2****
+==4519== 
+==4519== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 13 from 1)
+==4519== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==4519== malloc/free: 10 allocs, 10 frees, 664 bytes allocated.
+==4519== For counts of detected errors, rerun with: -v
+==4519== All heap blocks were freed -- no leaks are possible.
+bat40:~/courses/datastructures/class> 
+

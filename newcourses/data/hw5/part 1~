@@ -1,0 +1,20 @@
+Brandon Snow assignment 5 1.Growth Analysis
+
+
+A.
+
+1.Their is 2 loops one from 0-n and another from c-n so the loop c-n is nested in the first loop. The first loop will run n times. The second loop will run n-c times.
+
+2.big o:
+	First its n(n-c)  where c is a constant cause c is evualed as i+1. As i gets bigger the inner loop will run c times less. 
+	multiply out:
+		n^2-nc 
+	Big-0:
+		take largest vaule of n.The function is in big O: O(n^2)
+
+3. 
+	(500,000)^2 / (150)^2= 11,111,111.11 times slower
+
+
+b.
+1.Two while loops one nested in the other. A if statment that will run if two conditions are met. The while loop runs as long as a postitve number since the number line goes out to inifin

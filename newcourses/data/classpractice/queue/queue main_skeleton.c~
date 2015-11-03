@@ -1,0 +1,154 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define TRUE 1
+#define FALSE 0
+
+typedef struct node {
+	int info;
+	struct node * next;
+	struct node *right;
+	struct node *left;
+} node;
+
+node * front;
+node * rear;
+
+void initQueue() {
+	//what do front and rear point to when queue is empty?
+	front=rear=NULL;
+
+}
+
+void printQueue() {
+	node *p;
+	printf("Queue contains: ");
+	//traverse queue from front to rear and print each node
+		for(p = front;p != NULL ;p=p->right)
+				printf("%d ",p->info);
+	printf("\n");
+}
+void printQueueBackward() {
+	node *p;
+	printf("Queue contains: ");
+	//traverse queue from front to rear and print each node
+		for(p = rear;p != NULL ;p=p->left)
+				printf("%d ",p->info);
+	printf("\n");
+}
+void freeQueue() {
+		node *p;
+		node *q;
+	//traverse queue from front to rear and free each node
+		
+	//need to preserve control variable to allow movement to next
+		p=front;
+		while(p != NULL)
+		{
+				q = p;
+				p = q->right;
+				free(q);
+		}
+}
+
+node * getNode(int val) {
+	//alloc the node
+		node *n = (node *) malloc(sizeof(node));
+	//check for NULL
+		if(n == NULL)
+			return NULL;
+	//initialize and set members
+		n->info = val;
+		n->left = n->right = NULL;
+	return n;
+}
+
+void insertNode(node * n) {
+	//append node n to rear of queue
+	//set rear's next to n if rear != null
+	//also if queue is empty then front and rear both point to same node
+		if(rear!= NULL)
+		{
+			rear->right = n;
+			n->left = rear;
+		}
+		if(front == NULL)
+				front = n;
+
+		rear = n;
+	//set rear to n
+}
+
+int empty() {
+	//empty if front is NULL
+		if(front == NULL)
+			return TRUE;
+		else
+			return FALSE;
+}
+
+int deleteNode(node *n) {
+	//remove and return node from front of queue
+		if(empty() == TRUE)
+				return NULL;
+			if(n->right != NULL)
+					n->right->left = n->left;
+			if(front == n)
+					front = n->right;
+	//return null if empty
+	//move front to front->next
+			if(n->left != NULL)
+					n->left->right = n->right;
+			if(rear == n)
+					rear = n->left;
+	free(n);
+				return ret;
+}
+int pqmidelete(){
+			if(empty())
+					return -1;
+
+			node *q;
+			node *p;
+			int ret;
+			q = p =front;
+			while(p!= NULL)
+			{
+				if(p->info < q->info)
+							q=p;
+				p=p->right;
+			}
+				ret = q->info;
+				deleteNode(q);
+		
+			return ret;
+}
+int main(int nargs, char *args[]) {
+	int data [] = {5, 19,2, 11, 8};
+	int i;
+	
+	for(i = 0; i < 5; i++) {
+	 
+			printf("inserting node into queue\n");
+			node * n = getNode(data[i]);
+			if(n == NULL) {
+				printf("getnode returned null\n");
+			} else {
+				insertNode(n);
+			}
+	
+		printQueue();
+		printQueueBackward();
+			for(i=0;i<5;i++)
+			{
+					int x=pqmidelete();
+					printf("%d",x);
+
+			}
+	}
+	
+	freeQueue();
+	
+	return(EXIT_SUCCESS);
+}

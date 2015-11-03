@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+int i;
+int tot = 0;
+for (i = -10; i <= 10; i++) {
+  tot++;
+}
+printf("%d",tot);
+
+
+}

@@ -1,0 +1,34 @@
+1. Design Description: This part describes how you implement your program, such as the steps to resolve this problem. You should describe how to use the linklist in your program.
+
+How to find out files inside a directory or a file?
+    The first thing i do is check to make sure the correct inputs are entered and that the output can be opened. If the output cant beopened then just leave it alone. I used stat to check if input is a directory or a file.
+For my program i have a main that calls readFile in two different cases. One being the case that its a file and the other being its a directory. If its a file its calls readFile just once and proceeds to call it once if its a directory it calls it once for each regular file in the directory. If it finds a directory it searchs it and goes though that directories files and gets the words in it. Before any words are inserted in readFile i filiter out bad words with the wordFilter.
+    This is to make sure that any bad words dont make it to the final list. After i make sure all the good words are in the list i sort the list using common bubble sort methods. This is to accomdate the list. After reading i sort the list and print to a file and to a console.This process is repeated its a directory untill the directories files are completly searched. This is done through a seprate function.
+    My link list library is useful just for the insert at the rear. I changed around my library to have a dublicate word finder. If the word already exists the count of a cell is increased. 
+
+	UPDATE: I had to move the directory search to its own funtion. My program wouldn't open  files that were inside subdirectories. So I had to change that all and make sure i could go through subdirectories. This was the hardest part. I had to do some crazy lines that helped me get the full file path name. I had to use realpath to get the path WITHOUT systemLINKs uggh. After i figured that the systemlink wasnt being included i had to create a result variable that after i put the absolute path up to the directory in it add a "/" then d_name of the file and bam now i can fopen the file in a directory!!. Much props to http://stackoverflow.com/questions/11466139/open-file-with-fopen-given-absolute-path
+
+After that i call the same three functions and can handle everything you throw at me bro the only problem is for some reason my out put have one blank space. I also have some memory leaks I can't figure out it seems like the directory
+
+
+2. Performance Comparison: This part will get the performance of your script on a middle size input, which is provided at.Since you already got the performance of SHELL script and perlscript on the same input. To get the performance data, you simply run
+time ./wordcount middleinput 0 OUTPUT
+
+real	0m0.286s
+user	0m0.048s
+sys	0m0.004s
+
+That is the output for the middleinput. It seems like mine runs alot faster than i thought. I know that most of that time is sorting the list. Its cause i use bubblesort. When I want to beef it up i could majorly change my sort to merge sort. Its just the logic for merge sort when dealing with double linked list is harder and i wasn't able to figure it out in time. I was suprised that my program ran so fast as it could handle all the stuff once i got all the major issues out of the way. I really wanna see what i can do if i were to change that sort though cause almost 5 times the amount of time is spent sorting then reading in. The user part only takes .048 and it only access's the kernal for like .004 seconds. So its really efficient as opposed to being super slow like my 
+
+
+3. Advantage of Using C language: You simply lists some advantage of using C language,comparing to SHELL and Perl script, based on your observations. For example, performance,easy to program, maintainability, readablity, or other reasons. The answer can be open-minded.
+
+
+    For me I learned in C and I love/hate it. Its hard to get things going cause its more powerful than what we have been doing in this class, buy I have learned other more powerful languages like java and objective c. I enjoy c's free state where it seems like you can build anything you want. Creating libraries and usuable code that can be applied to all kinds of different situations is great. Its easy to take a tree library and apply it to a data file and get things sorted or printed in different kinds of patterns. I have written small hang man games and html checkers in c. I have also written all kinds of data structures to the syntax is natural to me and its easy to diagonse the problems in the code and make smart descisions on what to split into functions. I can do all this cause of the practice and time i put into it. I really also enjoy the data types how they are concrete. This means that whats read in gets read to one vaiarible and it makes everything alot more simplier. But like i saw in this project c is a fickle language and its almost impossible some times to get all the memory leaks worked out. What i end up enjoying the most is the ability to maintain such a good track on memory on the stack because its able to access the kernal and system files so easily. Since having to use the stat library and some of the more advanced i/o features i definaly appricate it more.
+		
+
+4. Changing the Assignment3: If you are using your own link list, how can you change it to make it suitable for this homework? Is there a way to make it an universal doubly link list? If yes, how you will change your code to do that or how you did it?
+
+
+
+    For this assignment I am using the library that i wrote.I changed the struct and the insert functions to handle a count and a string of chars. I didn't change the other functions cause your only testing our wordcount.c. When your writing a double linked list it has to hold the certain data type your working with so you could technically make a universal linked list but it would be a costly datastructure as your using two pointers for every node. It would be usefull for complicated element holding. All you would have to do is change all the functions to return the data needed like the function that returns the front value. Just edit it to return all data in the front node. Do The same for the rear. Other than that i can fit my program to take anything you need. Changing my library was a simple part of this assignment and didn't hold me back. Its the implemtation of this library that is hard. Since c doesn't have a garbage collector the hardest part is finding out where the memory is stored and free it. All i have to do is figure out why the memory is acting so funny. I have the ability to free all and it makes memory unreachable but its still having issues.

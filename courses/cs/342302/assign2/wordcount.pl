@@ -1,0 +1,210 @@
+#!/usr/bin/perl -w
+use warnings;
+
+use File::Find;
+#input first argument
+#number of prints to console is second argument 
+#output third argument
+$input=$ARGV[0];
+$number=$ARGV[1];
+$output=$ARGV[2];
+
+#command line arguments print checks
+#print "$input\n";
+#print "$output\n";
+
+#master arrays that will handle nonvaild words and vaild words
+#trueArray will hold all words that are vaild that i need to pull from wordArray
+#fileList holds all files in a directory
+#totalWordCounter is the variable that holds the total amount of vaild words
+%hashTable=();
+@wordArray=();
+@trueArray=();
+@fileList=();
+$totalWordCounter=0;
+#args check
+if ( @ARGV == 3 )
+{
+  #if statesments specified in insturctions to check if input == output to check if output exist and if number is not a digit
+	if ( -e $input ){
+		
+		if ($input eq $output){
+			print "ERROR:input file '$input' would be overridden.\n";
+			exit;		
+		}
+		# Check if output already exists.
+		if (-e $output){
+			print "ERROR:Output file '$output' already exist and will be overridden.\n";
+			exit;		
+		}
+		# Make sure the user gives only a number.
+		if ( $number !~ /^[+]?\d+$/){
+			print "ERROR:Invalid $number must be a digit. Will cause script to break.\n"; 
+			exit;
+		}
+	}
+	else
+	{
+		print "ERROR:$input does not exist so $output will be empty!\n";
+		exit;
+	}
+}
+else
+{
+  print "ERROR:Not enough arguments!\n";
+		exit;
+}
+
+#below are my 3 sub functions that enact on my gobal declarations above
+
+#prints to file and console 
+sub printToFile
+{
+	#counter for printing to console
+	my $counter = 0;
+	#sorted words from most popular to least popular
+	my @sorted_word =();
+	#total number of word occurence 
+	my @numberOfWords =();
+	#open for output
+	open(OUTPUT,">$output") or die "ERROR: the INPUT is not existing";
+		#master foreach to go through each word in hashtable that has been prefilled
+		#and print them sorted and store the sorted values for print to console
+		foreach $word( sort ({$hashTable{$b} <=> $hashTable{$a}} keys %hashTable))
+		{
+		#output all words to a file and the ammount of words at each key	
+		print OUTPUT "$hashTable{$word} $word" . "\n";
+		#push sorted words into array for printing	
+		push @sorted_word,$word;
+		#push sorted values into array
+		push @numberOfWords,$hashTable{$word};
+		
+		}
+		#print to screen
+		while ($counter < $number) 
+		{		
+				print "$numberOfWords[$counter] $sorted_word[$counter]" . "\n";
+				$counter++;
+			
+		}
+		
+		#total number of words calculated by validWords
+	 print $totalWordCounter . "\n";
+}
+#handles all checks for valid words and will push to a gobal trueArray that has all good valid words ecluding any word with puncuation. 
+#also removes every letter after a '
+sub validWords
+{
+		my $counter = 0;
+		
+		#Will take all values split by a space from a file and figure out what to do with them
+		while($counter < $#wordArray+1)
+		{
+			
+			my $word = $wordArray[$counter];
+			#perls tolower
+			my $lcWord = lc($word);	
+			#reference https://www.cs.tut.fi/~jkorpela/perl/regexp.html
+			#words must have letters of alphabet or have letters of the alphabet and a ' then leters of the alphabet
+			#or are 1 letter words such as a 
+			if($lcWord =~ /(^[a-zA-Z-]\-?+[a-zA-Z]+$)|(^[a-zA-Z]+\-[a-zA-Z]+$)|^[a-zA-Z]{1}$/)
+			{
+				#remove '
+				#$lcWord =~ s/\'.*//;
+				push @trueArray,$lcWord;
+				$counter++;
+				#total ammount of words 
+				$totalWordCounter++;
+			}
+			else
+			{
+				#if current word doesnt fit to be pushed to trueArray increment past that word
+				$counter++;
+			}
+		}
+}
+
+#fuction that is tied with the find library http://perldoc.perl.org/File/Find.html
+sub wanted {
+	my $index=0;
+	#check directory for files and put into a list for me to use in master if statement
+	for $subFile ($File::Find::name){
+		next if ( -d $subFile);
+		#put all file ext into a array and increment index so each index holds one file ext
+		$fileList[$index++] = $subFile;
+	}
+	return;
+}
+
+
+
+
+
+#start of master if and else statements that handle all main like logic for me
+#MYFILE is the current file that i am working with if input is a single file myfile is that one file
+if (-f $input) 
+{
+	#open file
+	open(MYFILE,$input) or die "ERROR: the INPUT is not existing";
+ 	while(<MYFILE>)
+	{
+		#im leaving this here for me im learning!!!!
+		#$_ is a single line not word!!!! i need to split that line up if it has multipul words	
+			$line=$_;
+			
+			#pushes values into array if they are split by a space!!!!!	#This is not a filtered array
+    	push(@wordArray,split(/\s+/,$line));	
+	}
+	#Call master word checker thingy
+	#creates a array that has all words in it that i want from instructions
+	validWords(@wordArray,@trueArray);
+	#take array changed by vaildwords and push on to hash table for quicker access 
+	#cuts time by like x200
+	foreach my $singleWord (@trueArray)
+	{
+			$hashTable{$singleWord}++;
+			
+	}
+	#master call to printToFile which not only prints to file but also to console per instructions
+	 printToFile();
+}
+elsif (-d $input)
+{
+  #print "This is a directory.\n";
+	#fills a array with file names for me to scan through and fill #wordArray then filter to put into trueArray
+	find(\&wanted, $input);
+	
+	foreach(@fileList)
+	{
+		#test print
+		#print $_ . "\n";
+		open(MYFILE, $_);
+		while(<MYFILE>)
+		{
+		
+		#$_ is a single line not word!!!! i need to split that line up if it has multipul words	
+			$line=$_;
+			
+			#pushes values into array if they are split by a space!!!!!	#This is not a filtered array
+    	push(@wordArray,split(/\s+/,$line));
+			
+		}
+	}
+	#gobal array is now filtered and filled with everything from the directory that is a file
+	validWords(@wordArray,@trueArray);
+	#push every word from every file into my hash table and if that exist it just increaments at that value else it inputs it and increments that to one
+	foreach my $singleWord (@trueArray)
+	{
+			$hashTable{$singleWord}++;
+	}
+	#master call to printToFile which not only prints to file but also 
+	 printToFile();
+}
+else
+{
+	print "ERRORL:I don't know what this is.";
+	exit;
+} 
+
+	#not to sure if this closes the subFile(s) i opened with directory if this doesnt then im boned
+	close(MYFILE);

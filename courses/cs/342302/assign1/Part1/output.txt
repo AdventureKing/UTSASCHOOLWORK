@@ -1,0 +1,15 @@
+/home/tfv024/courses/cs/342302/assign1/Part2/rr.sh
+/home/tfv024/courses/cs/342302/assign1/Part2/text.txt
+/home/tfv024/courses/cs/342302/assign1/Part2/rr.sh~
+/home/tfv024/courses/cs/342302/assign1/Part2/text.txt~
+/home/tfv024/courses/cs/342302/assign1/Part2/wordcount.sh~
+/home/tfv024/courses/cs/342302/assign1/Part2/test.txt~
+/home/tfv024/courses/cs/342302/assign1/Part2/output.txt~
+/home/tfv024/courses/cs/342302/assign1/Part2/test2.txt
+/home/tfv024/courses/cs/342302/assign1/Part2/wordcount.sh
+/home/tfv024/courses/cs/342302/assign1/Part2/test2.txt~
+/home/tfv024/courses/cs/342302/assign1/Part2/output.txt
+/home/tfv024/courses/cs/342302/assign1/Part2/test.txt
+/home/tfv024/courses/cs/342302/assign1/Part1/getfiles.sh
+/home/tfv024/courses/cs/342302/assign1/Part1/output.txt
+/home/tfv024/courses/cs/342302/assign1/assign1.pdf

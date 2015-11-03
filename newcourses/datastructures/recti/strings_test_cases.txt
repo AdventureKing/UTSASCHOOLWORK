@@ -1,0 +1,77 @@
+bat49:~/Courses/datastructures/recti> ./xstring 
+
+This program will now excute
+Please enter 100 numbers for S1:
+brandon
+Please enter 100 numbers for S2:
+brandon
+
+This is the count of s1:7
+
+This is the count of S2:7
+
+S1 reversed is:nodnarb
+
+
+S2 reversed is:nodnarb
+
+
+
+
+S1:brandon
+
+S2:brandon
+
+When you compare the two if you return 0 then the strings were equal,if you return -1 S1 comes before S2,if you return 1 S2 comes before S1) : 0
+Is S1 in S2?(If you return a 1 it is , 0 it isn't):1
+bat49:~/Courses/datastructures/recti> ./xstring
+
+This program will now excute
+Please enter 100 numbers for S1:
+brandon
+Please enter 100 numbers for S2:
+snow
+
+This is the count of s1:7
+
+This is the count of S2:4
+
+S1 reversed is:nodnarb
+
+
+S2 reversed is:wons
+
+
+
+S1:brandon
+
+S2:snow
+
+When you compare the two if you return 0 then the strings were equal,if you return -1 S1 comes before S2,if you return 1 S2 comes before S1) : -1
+Is S1 in S2?(If you return a 1 it is , 0 it isn't):0
+bat49:~/Courses/datastructures/recti> ./xstring
+
+This program will now excute
+Please enter 100 numbers for S1:
+brandon
+Please enter 100 numbers for S2:
+brabrandon
+
+This is the count of s1:7
+
+This is the count of S2:10
+
+S1 reversed is:nodnarb
+
+
+S2 reversed is:nodnarbarb
+
+
+
+S1:brandon
+
+S2:brabrandon
+
+When you compare the two if you return 0 then the strings were equal,if you return -1 S1 comes before S2,if you return 1 S2 comes before S1) : 1
+Is S1 in S2?(If you return a 1 it is , 0 it isn't):1
+bat49:~/Courses/datastructures/recti> 

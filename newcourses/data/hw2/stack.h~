@@ -1,0 +1,26 @@
+
+#define FALSE 0
+#define TRUE 1
+#define STACKSIZE 10
+typedef struct nodeT{
+		
+		int *num;
+		int count;
+		int len;
+}node;
+node *stack;
+/*
+add variables as needed to keep track of capacity, etc. 
+minimum is stack top or # elements
+*/
+int top;
+
+node *growStack();
+void initStack();
+int full();
+int empty();
+int push(int num);
+int pop();
+int size();
+void printNode(node * n);
+

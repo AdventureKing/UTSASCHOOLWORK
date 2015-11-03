@@ -1,0 +1,11 @@
+#ifndef _ran_h
+#define _ran_h_
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+
+int RandomNumber(int max, int min);
+
+#endif

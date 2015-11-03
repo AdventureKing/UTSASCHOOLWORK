@@ -1,0 +1,150 @@
+BRANDON SNOW TFV024 DATA STRUCTURES PART 3 ASSIGNMENT 3:
+
+After i finished coding both I noticed that the Linked list one is more efficient when it comes to just basic set of numbers that was given bacause it would always search from the front. In double linked list it searches from the back for numbers that are greater than rear/2. This means if you have say a number pool of like 1,2,3,4,800-899 as a example then when you try to instert say 500-600 or 600-700 or 700-800 it would traverse through the back. But things like that can be over come with some simple checks like traversing the linked list and getting a current count and compare that count with the number inserted. Say if the number insterted is closer to the front through total count as apposed to its value compared to the largest value in linked list then it could say insert 600 in spot 5 just by traversing from the front. But over all double linked list is a very complicated set up but very rewarding in the fact that you can minuplate it in way different ways then a single linked list. IN THIS IMPLEMENTATION only is the linked list a little more efficient i include my print outs as proof.
+DOUBLE LINKED LIST:
+brandon@Adventureking:~/Desktop/hw3/Double linked$ valgrind ./xhw3
+==2541== Memcheck, a memory error detector
+==2541== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==2541== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==2541== Command: ./xhw3
+==2541== 
+Assignment 3 Problem 1 by Brandon Snow
+ Insert into queue. Checked 0 node
+Queue contains: 15 
+ Insert into queue. Checked 1 node
+Queue contains: 5 15 
+ Insert into queue. Checked 1 node
+Queue contains: 5 15 20 
+Remove off top
+Queue contains: 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 8 15 20 
+ Insert into queue. Checked 3 node
+Queue contains: 8 13 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 4 8 13 15 20 
+ Insert into queue. Checked 3 node
+Queue contains: 4 8 9 13 15 20 
+Remove off top
+Queue contains: 8 9 13 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 1 8 9 13 15 20 
+ Insert into queue. Checked 2 node
+Queue contains: 1 8 9 13 15 19 20 
+ Insert into queue. Checked 1 node
+Queue contains: 1 8 9 13 15 19 20 23 
+ Insert into queue. Checked 4 node
+Queue contains: 1 8 9 10 13 15 19 20 23 
+Remove off top
+Queue contains: 8 9 10 13 15 19 20 23 
+ Insert into queue. Checked 1 node
+Queue contains: 6 8 9 10 13 15 19 20 23 
+Total Checks:31
+==2541== 
+==2541== HEAP SUMMARY:
+==2541==     in use at exit: 0 bytes in 0 blocks
+==2541==   total heap usage: 13 allocs, 13 frees, 856 bytes allocated
+==2541== 
+==2541== All heap blocks were freed -- no leaks are possible
+==2541== 
+==2541== For counts of detected and suppressed errors, rerun with: -v
+==2541== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+brandon@Adventureking:~/Desktop/hw3/Double linked$ 
+
+LINKED LIST
+
+brandon@Adventureking:~/Desktop/hw3/linked list$ valgrind ./xhw3
+==2756== Memcheck, a memory error detector
+==2756== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==2756== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==2756== Command: ./xhw3
+==2756== 
+Assignment 3 Problem 1 by Brandon Snow
+ Insert into queue. Checked 0 nodes.
+Queue contains: 15 
+ Insert into queue. Checked 1 node.
+Queue contains: 5 15 
+ Insert into queue. Checked 2 nodes.
+Queue contains: 5 15 20 
+Remove off top
+Queue contains: 15 20 
+ Insert into queue. Checked 1 node.
+Queue contains: 8 15 20 
+ Insert into queue. Checked 2 nodes.
+Queue contains: 8 13 15 20 
+ Insert into queue. Checked 1 node.
+Queue contains: 4 8 13 15 20 
+ Insert into queue. Checked 3 nodes.
+Queue contains: 4 8 9 13 15 20 
+Remove off top
+Queue contains: 8 9 13 15 20 
+ Insert into queue. Checked 1 node.
+Queue contains: 1 8 9 13 15 20 
+ Insert into queue. Checked 6 nodes.
+Queue contains: 1 8 9 13 15 19 20 
+ Insert into queue. Checked 7 nodes.
+Queue contains: 1 8 9 13 15 19 20 23 
+ Insert into queue. Checked 4 nodes.
+Queue contains: 1 8 9 10 13 15 19 20 23 
+Remove off top
+Queue contains: 8 9 10 13 15 19 20 23 
+ Insert into queue. Checked 1 node.
+Queue contains: 6 8 9 10 13 15 19 20 23 
+Total Checks:29
+==2756== 
+==2756== HEAP SUMMARY:
+==2756==     in use at exit: 0 bytes in 0 blocks
+==2756==   total heap usage: 13 allocs, 13 frees, 760 bytes allocated
+==2756== 
+==2756== All heap blocks were freed -- no leaks are possible
+==2756== 
+==2756== For counts of detected and suppressed errors, rerun with: -v
+
+
+
+YOU WILL SEE LINKED LIST ONLY BEATS IT BY 2 SEARCHES OVER ALL
+
+
+
+
+
+
+
+
+
+UPDATE: actually i was accidently updating total checks in my main by accident so the search for double link list is actually way more efficient
+
+bat18:~/courses/data/hw3/Double linked> ./xhw3                                  Assignment 3 Problem 2 by Brandon Snow
+ Insert into queue. Checked 0 node
+Queue contains: 15 
+ Insert into queue. Checked 1 node
+Queue contains: 5 15 
+ Insert into queue. Checked 1 node
+Queue contains: 5 15 20 
+Remove off top
+Queue contains: 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 8 15 20 
+ Insert into queue. Checked 3 node
+Queue contains: 8 13 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 4 8 13 15 20 
+ Insert into queue. Checked 3 node
+Queue contains: 4 8 9 13 15 20 
+Remove off top
+Queue contains: 8 9 13 15 20 
+ Insert into queue. Checked 1 node
+Queue contains: 1 8 9 13 15 20 
+ Insert into queue. Checked 2 node
+Queue contains: 1 8 9 13 15 19 20 
+ Insert into queue. Checked 1 node
+Queue contains: 1 8 9 13 15 19 20 23 
+ Insert into queue. Checked 4 node
+Queue contains: 1 8 9 10 13 15 19 20 23 
+Remove off top
+Queue contains: 8 9 10 13 15 19 20 23 
+ Insert into queue. Checked 1 node
+Queue contains: 6 8 9 10 13 15 19 20 23 
+Total Checks:19
+
+

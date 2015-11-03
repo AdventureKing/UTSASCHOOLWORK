@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+struct pair{
+
+    int first;
+    int second;
+    int third;
+};
+
+struct pair add(struct pair p1, struct pair p2)
+{
+    struct pair temp;
+    temp.first = p1.first + p2.first;
+    temp.second = p1.second + p2.second;
+    return temp;
+
+};
+
+struct pair multiply(struct pair p1, struct pair p2)
+{
+    struct pair temp;
+    temp.first = p1.first * p2.first;
+    temp.second = p1.second * p2.second;
+    return temp;
+
+
+
+}; 
+struct pair multi2(struct pair p1)
+{
+    struct pair temp;
+    temp.first = p1.first * p1.third;
+    temp.second = p1.second * p1.third;
+    return temp;
+
+
+};
+
+struct pair raise(struct pair p1)
+{
+    struct pair temp;
+    temp.first = pow(p1.first,p1.third);
+    temp.second = pow(p1.second,p1.third);
+    return temp;
+};
+
+int main() {
+    struct pair nu1,nu2,nu4,nu5,nu6,nu7,nu8,nu9;
+    printf("Enter first pair\n");
+    scanf("%d %d",&nu1.first, &nu1.second);
+    printf("Enter second pair\n");
+    scanf("%d %d",&nu2.first, &nu2.second);
+    printf("Enter a third number to raise/multiply first pair to:\n");
+    scanf("%d",&nu1.third);
+    printf("Enter a third number to raise/multiply second pair to:\n");
+    scanf("%d",&nu2.third);
+    nu4 = add(nu1, nu2);
+    printf("Addition result of (A,B) + (E,F) = (A+E,B+F)= (%d,%d)\n",nu4.first,nu4.second);
+    nu5 = multiply(nu1,nu2);
+    printf("Multiplication result of (A,B) * (E,F) = (A*E,B*F)= (%d,%d)= (%d,%d)\n",nu1.first,nu1.second,nu5.first,nu5.second); 
+    nu6 = multi2(nu1);
+    printf("First pair: C*(A,B) = (%d,%d)\n",nu6.first,nu6.second);
+    nu7 = multi2(nu2);
+    printf("Second pair: C*(E,D) = (%d,%d)\n",nu7.first,nu7.second);
+    nu8 = raise(nu1);
+    printf("First pair: C^(A,B) = (%d,%d)\n",nu8.first,nu8.second);
+    nu9= raise(nu2);
+    printf("Second pair: C^(E,F) = (%d,%d)\n",nu9.first,nu9.second);
+
+    return 0;
+
+} 

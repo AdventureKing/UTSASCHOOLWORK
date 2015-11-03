@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+//slide 33 for directory on I/O slides 
+void openFILE(FILE *fp);
+
+int main(int nargs,char *argv[])
+{
+	FILE *fp;
+	
+	
+	if(nargs != 4)
+	{
+	printf("ERROR: you dun goofed bro!!!!\n");
+	exit(1);
+	}
+	else
+	{	
+	//open file
+	fp = fopen(argv[1], "r");
+	if(fp == NULL)
+			exit(1);
+	}
+
+
+	openFILE(fp);
+
+
+return 0;
+}
+
+
+void openFILE(FILE *fp)
+{
+
+
+	//if(fp)
+	//{
+		//printf("Its a file\n");
+	//}
+
+
+}

@@ -1,0 +1,11 @@
+#! /bin/csh -f
+set INCLUDE = /home/tfv024/courses/datastructures
+set CSLIB = $INCLUDE/cslib.a
+set LIBRARIES = ($CSLIB -lm)
+foreach x ($*)
+  if ("x$x" == "x-c") then
+    set LIBRARIES = ""
+    break
+  endif
+end
+gcc -g -I$INCLUDE $* $LIBRARIES

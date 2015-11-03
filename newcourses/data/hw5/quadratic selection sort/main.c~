@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define SIZE 200
+
+void sort_large(int numbers[], int array_size);
+
+
+int main(int nargs, char *argv[]) {
+	FILE *fp;
+	int number;
+	int i=0;
+	int j;
+	
+	int array[SIZE];
+	
+	printf("Assignment 5 Problem 2 by BRANDON SNOW\n");
+	//open the file
+	fp = fopen("data.txt", "r");
+	if(fp == NULL) {
+		perror("cannot open file!");
+		return(EXIT_FAILURE);
+	}
+	
+	//read file, 1 line per array intry 
+
+	while(!feof(fp)) 
+	{
+		fscanf(fp,"%d\n",&number);
+		array[i] = number;
+		i++;
+	}
+	sort_large(array,i);
+	for(j=0; j<i; j++)
+	{
+		printf("%d: %d\n",j +1,array[j]);
+	}
+	fclose(fp);
+	
+	
+	return(0);
+}
+
+
+void sort_large(int numbers[], int array_size)
+{
+  int i, j;
+  int min, temp;
+	int **aux_arrays;
+	int arraycluster_size = sqrt(array_size);
+	int large_num_array[arraycluster_size];
+	aux_array = malloc(sizeof(sqrt(array_size)) * arraycluster_size);
+
+
+	/*
+  for (i = 0; i < array_size-1; i++)
+  {
+    min = i;
+    for (j = i+1; j < array_size; j++)
+    {
+      if (numbers[j] < numbers[min]) 
+        min = j;
+    }
+    temp = numbers[i];
+    numbers[i] = numbers[min];
+    numbers[min] = temp;
+  }
+  */
+}

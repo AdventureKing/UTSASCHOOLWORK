@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include "set.h"
+
+int main()
+{
+ return 0;
+ 
+ setADT a = NewSet();
+ setADT b;
+ int temp, len;
+ 
+ scanf("%d", &temp);
+ b = setInsertElementSorted(a, temp);
+ printf("%u", b);
+
+}

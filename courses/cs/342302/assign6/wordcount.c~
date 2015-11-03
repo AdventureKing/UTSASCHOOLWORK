@@ -1,0 +1,441 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <dirent.h>
+#include <pthread.h>
+#include "dllist.h"
+
+//slide 33 for directory on I/O slides 
+struct arg_struct {
+    int index;
+    int starting;
+		int ending;
+		char *file;
+		FILE *fp;
+}arg_struct;
+void readFILE(struct arg_struct *information);
+bool wordfilter(char *word);
+void printList(int num,FILE *outPut);
+void sortLinkedList();
+void searchdir(const char *name, int level);
+void freeAll();
+char *splitFile(FILE *infp,unsigned int fileSize, int numThread,int fd);
+void *editThread(void *args);
+pthread_mutex_t look = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t m_cond = PTHREAD_COND_INITIALIZER;
+
+
+int main(int nargs,char *argv[])
+{
+  pthread_mutex_init(&look, NULL);
+  pthread_cond_init(&m_cond, NULL);
+	FILE *fp;
+	FILE *outPut;
+	struct stat fileStat;
+	struct stat fileStat1;
+	if(nargs != 5)
+	{
+		printf("ERROR:Not enough parameters. you dun goofed bro!!!!\n");
+		exit(1);
+	}
+	else
+	{	
+		//
+     
+		 int numPrint;
+		int numThread;
+    
+
+   	if(sscanf(argv[2],"%i",&numPrint) != 1 || sscanf(argv[2],"%i",&numPrint) != 1)
+		{
+				printf("ERROR: parameter 2 and 3 have to be integers!\n");
+					exit(1);
+		}
+    numPrint = atoi(argv[2]);
+		if(atoi(argv[3]) == 0)
+		{
+			numThread = 1;
+		}
+		else 
+   	 numThread = atoi(argv[3]);
+
+    if(stat(argv[1],&fileStat) < 0)
+		{
+			printf("ERROR:FILE OR DIRECTORY NOT EXIST\n");    
+        exit(1);
+		}
+		if(stat(argv[4],&fileStat1) == 0)
+		{
+			printf("ERROR:OUTPUT FILE EXIST AND WILL BE OVER WRITTEN\n");    
+        exit(1);
+		}
+		else
+		{
+			char *ftp = argv[4];
+    	outPut = fopen(ftp,"w+"); 
+		}
+
+    
+
+    if(outPut == NULL)
+    {
+     printf("ERROR: couldnt open file for writing\n");
+     exit(1);
+
+    }
+
+//if command line read in a file or read in a directory
+			if (S_ISREG(fileStat.st_mode) && (fileStat.st_mode & S_IRUSR))
+			{
+				//printf("This is a file bro! and you can read it bro good job\n");
+						 unsigned int fileSize = fileStat.st_size;
+          int fd = open(argv[1],O_RDONLY);
+					char *file = NULL;
+					//printf("FileSize: %d\n", fileSize);
+				
+					int i;
+          fp = fopen(argv[1], "r");
+						 if(fp == NULL)
+					   {
+						  printf("ERROR: Couldnt open file might not exist!!!!!\n");
+						  exit(1);
+					   }
+						//mmap the file
+					 	file = splitFile(fp,fileSize,numThread,fd);
+						int length = fileSize/numThread;
+						int j;
+						//usable stuff
+						
+						int tempPosition = 0;
+						int startingIndex[numThread];
+						int endingIndex[numThread];
+						//moving starting and ending points
+						for(i = 0; i < numThread; i++)
+						{  
+							startingIndex[i] = i * length;
+							endingIndex[i] = (i * length) + length;
+						}
+
+						for(i = 1; i < numThread; i++)
+						{
+								while(file[startingIndex[i]] != ' ' && file[startingIndex[i]] != '\t' && file[startingIndex[i]] != '\n')
+								{
+									
+									startingIndex[i]++;
+									endingIndex[i-1]++;
+								}
+						}
+						//start of assignment 6 this is where we start to create the threads
+						pthread_t thread[numThread];
+   
+						//printf("NumThread:%d\n",numThread);
+						
+						
+							for(i = 0; i < numThread; i++)
+							{
+								//pthread_mutex_lock(&look);
+								int success;
+								int starting = startingIndex[i];
+								int ending = endingIndex[i];
+								struct arg_struct args;
+    						args.index = i;
+    						args.starting = starting;
+								args.ending = ending;
+								args.file = file;
+								args.fp = fp;
+								success = pthread_create(&thread[i], NULL, editThread, (void *)&args);
+								if ( 0 != success )
+        					printf("can't create thread:%s\n", strerror(success));
+								
+								//pthread_mutex_unlock(&look);
+								
+							}
+							
+							for(i = 0; i < numThread; i++)
+								pthread_join(thread[i], NULL);
+					
+				   
+	         sortLinkedList();   			
+		       printList(numPrint,outPut);
+           fclose(fp);
+					 //freeAll();
+					
+			}
+			else if (S_ISDIR(fileStat.st_mode) && (fileStat.st_mode & S_IRUSR))
+			{
+			//printf("This is a directory and you can read noice\n");
+           //searchdir(argv[1],0);
+					 //sortLinkedList();
+					 //printList(num,outPut);
+					 //freeAll();
+   		 }
+			else
+			{
+				printf("ERROR:your input is either not a file, not a directory,or the input could not be read please check permissions on file and re-run if you believe a error has occured"); 
+			}
+	}
+ fclose(outPut);
+    
+return 0;
+}
+void *editThread(void *args)
+{
+	pthread_mutex_lock(&look);
+	struct arg_struct *args1 = (struct arg_struct *)args;
+	//printf("int i:%d starting position on file:%d ending position on file:%d\n",args1->index,args1->starting,args1->ending);
+	
+	readFILE(args1);
+	pthread_mutex_unlock(&look);
+	
+	return NULL;
+}
+
+void readFILE(struct arg_struct *information)
+{
+		
+		
+		int starting = information->starting;
+		int ending = information->ending;
+		int index = information->index;
+		char *file = information->file;
+		int i=0;
+		int j=starting;
+		//printf("int i:%d starting position on file:%d ending position on file:%d\n",information->index,information->starting,information->ending);
+		int tempPosition;
+							for(j = starting; j <= ending; j++)
+							{
+								//filter
+								char tempAry[500];
+								tempPosition = 0; 
+								//cut out the white space caused by having to move the starting and ending indexs
+								//printf("file[startingIndex[i]]: %c\n",file[startingIndex[i]]);
+								while(file[j] != ' ' && file[j] != '\t' && file[j] != '\n' && j <= ending)
+								{
+											tempAry[tempPosition] = file[j];
+											tempPosition++;
+											j++;
+												
+								}
+								tempAry[tempPosition] = '\0';
+								
+								if(strlen(tempAry) > 0)	
+								{
+									if(wordfilter(tempAry) == TRUE)
+									{
+										//printf("%s\n",tempAry);
+										dl_insert(front,tempAry);
+								  }	
+									
+								}	
+										
+							}
+										
+}
+//filter the words out that are unneeded
+bool wordfilter(char *word)
+{
+		unsigned int i;
+	
+	for(i = 0; i< strlen(word); i++)
+	{
+			if(word[i] != '-')
+			{
+			word[i]=tolower(word[i]);
+			}
+		if(word[i] == '-' ||(word[i] >= 97 && word[i] <= 122) || word[i] == ' ')
+		{
+			continue;
+		}
+		else
+		{
+			//printf("this word was filitered out %s\n",word);
+			return FALSE;
+		}
+	}
+		return TRUE;
+
+}
+//print list starting from greatest to least
+void printList(int num,FILE *outPut)
+{
+    
+	int i=0;
+	list_t *curr = rear;
+	while(curr != NULL )
+	{
+     if(i < num)
+			printf("%d\t%s \n",curr->count,curr->word);
+		 i++;
+     fprintf(outPut, "%d\t%s\n",curr->count,curr->word);
+		 if(curr==front)
+			break;	
+		
+		curr = curr->prev;
+			
+	}
+	//printf("front->prev:%s\n",front->word);
+	//printf("rear->next:%s\n",rear->word);
+}
+//bubble sort my linked list
+void sortLinkedList(){
+    int i=1;
+
+
+    list_t *curr=front;
+    //get total number of nodes to run bubble sort for loops on
+    while(curr != NULL)
+    {
+        i++;
+        if(curr == rear)
+            break;
+        curr = curr->next;
+
+    }
+
+    //printf("%d\n",i);
+    int x,y;
+
+    for(x = 0; x < i;x++)
+    {
+     curr = front;
+      for(y=0; y<i-1-x;y++)
+      {
+        //swap just the word and value to next node if more occurences of current word
+       if(curr->count > curr->next->count)
+       {
+        char *tempNextWord = curr->next->word;
+        int tempNextNum = curr->next->count;
+        char *tempWord = curr->word;
+        int tempNum = curr->count;
+        curr->next->count = tempNum;
+        curr->next->word = tempWord;
+        curr->word = tempNextWord;
+        curr->count = tempNextNum;
+
+       }
+       curr = curr->next;
+
+      }
+    }
+
+}
+void searchdir(const char *name, int level)
+{
+    DIR *dir;
+    struct dirent *entry;
+		char *symlinkpath = (char *)name;
+    if (!(dir = opendir(name)))
+        return;
+    if (!(entry = readdir(dir)))
+        return;
+
+    do {
+        if (entry->d_type == DT_DIR)
+				{
+            char path[1024];
+            int len = snprintf(path, sizeof(path)-1, "%s/%s", name, entry->d_name);
+            path[len] = 0;
+            if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
+                continue;
+            searchdir(path, level + 1);
+        }
+        else
+				{
+					//this logic sucked so 
+					//buf has the full real file path
+					//then i copy the systemlink part of the real file path in buff
+					//then since that deletes the d_name i pin a / and the d_name to the end
+					//of result so result now has full file path
+						FILE *fp;
+						char *ptr;
+						char buf[PATH_MAX + 10]; 
+						char result[1000];
+						realpath(entry->d_name, buf);
+							//printf("systemlinkpath %s\n",symlinkpath);
+							ptr = realpath(symlinkpath,buf);
+							strcpy(result,ptr);
+							strcat(result,"/");
+							strcat(result,entry->d_name);
+    					
+						//	printf("result %s\n",result);
+							if(strcmp(result, "~") == 0)
+							{
+								continue;
+							}
+							else
+							{
+								fp = fopen(result,"r");
+								//printf("opened %s\n",result);
+							}						
+						//if you cant read one file skip it and continue
+							if(fp == NULL)
+					   	{
+						  	printf("ERROR: You cant open this file in this directory\n");
+						  	continue;
+					   	}	
+							else
+							{
+								
+								readFILE(fp);
+		            fclose(fp); 
+							}
+				     
+		          
+				}
+    } while ((entry = readdir(dir)));
+    closedir(dir);
+}
+
+//free all memory
+void freeAll()
+{
+		list_t *curr = front;
+			while(curr != NULL && curr->next != NULL)
+			{
+				list_t *temp = curr;
+				free(temp->word);
+				free(temp);
+				curr = curr->next;
+				if(curr == rear)
+					break;
+			}
+			free(curr->word);
+			free(curr);
+			
+}
+
+char *splitFile(FILE *infp,unsigned int fileSize, int numThread,int fd)
+{
+	
+ 	char *address;
+	
+	size_t length;
+	
+	off_t offset=0;
+	length = fileSize/numThread;		
+	//printf("length:%d\n",length);
+	
+		//printf("run number:%d\n",i);
+
+
+		address  = (char *)mmap(NULL,fileSize,PROT_READ,MAP_SHARED,fd,offset);
+		if(address  == MAP_FAILED)
+		{
+			printf("ERROR: you dun goofed!\n");
+				exit(1);		
+		}
+		//printf("random letter: %c",address[length]);
+	  
+		//printf("\n");
+		//printf("Offset:%d\n",offset);
+		//offset = offset + length;
+		
+		
+	return address;
+}
+

@@ -1,0 +1,293 @@
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> ./dlib-editor
+*I brandon
+   b r a n d o n
+                ^
+*h
+Use the following commands to edit the buffer:
+  I...   Inserts text up to the end of the line
+  F      Moves forward a character
+  B      Moves backward a character
+  J      Jumps to the beginning of the buffer
+  E      Jumps to the end of the buffer
+  D      Deletes the next character
+  H      Generates a help message
+  Q      Quits the program
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*j
+   b r a n d o n
+^
+*e
+   b r a n d o n
+                ^
+*h
+Use the following commands to edit the buffer:
+  I...   Inserts text up to the end of the line
+  F      Moves forward a character
+  B      Moves backward a character
+  J      Jumps to the beginning of the buffer
+  E      Jumps to the end of the buffer
+  D      Deletes the next character
+  H      Generates a help message
+  Q      Quits the program
+   b r a n d o n
+                ^
+*d
+   b r a n d o n
+                ^
+*h
+Use the following commands to edit the buffer:
+  I...   Inserts text up to the end of the line
+  F      Moves forward a character
+  B      Moves backward a character
+  J      Jumps to the beginning of the buffer
+  E      Jumps to the end of the buffer
+  D      Deletes the next character
+  H      Generates a help message
+  Q      Quits the program
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*fff
+   b r a n d o n
+          ^
+*f
+   b r a n d o n
+            ^
+*f
+   b r a n d o n
+              ^
+*f
+   b r a n d o n
+                ^
+*f
+Already at end bro!
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*b
+   b r a n d o n
+      ^
+*b
+   b r a n d o n
+    ^
+*b
+   b r a n d o n
+  ^
+*b
+   b r a n d o n
+^
+*^Z
+Suspended
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> make
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -c dlibbuf.c
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -o dlib-editor editor.o dlibbuf.o  ../cslibInstall/cslib/cslib.a
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> ./dlib-editor
+*I brandon
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*b
+   b r a n d o n
+      ^
+*b
+   b r a n d o n
+    ^
+*b
+   b r a n d o n
+  ^
+*b
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*^Z
+Suspended
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> make
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -c dlibbuf.c
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -o dlib-editor editor.o dlibbuf.o  ../cslibInstall/cslib/cslib.a
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> make
+make: Nothing to be done for `all'.
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> ./dlib-editor
+*I brandon
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*b
+   b r a n d o n
+      ^
+*b
+   b r a n d o n
+    ^
+*b
+   b r a n d o n
+  ^
+*b
+   b r a n d o n
+^
+*b
+Segmentation fault
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> b
+b: Command not found.
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> ./dlib-editor
+*I brandon
+   b r a n d o n
+                ^
+*h
+Use the following commands to edit the buffer:
+  I...   Inserts text up to the end of the line
+  F      Moves forward a character
+  B      Moves backward a character
+  J      Jumps to the beginning of the buffer
+  E      Jumps to the end of the buffer
+  D      Deletes the next character
+  H      Generates a help message
+  Q      Quits the program
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*f
+   b r a n d o n
+              ^
+*f
+   b r a n d o n
+                ^
+*e
+   b r a n d o n
+                ^
+*j
+   b r a n d o n
+^
+*b
+Segmentation fault
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> make
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -c dlibbuf.c
+gcc -I../cdlibInstall/cslib  -I../cslibInstall/cslib -L../cslibInstall/cslib -o dlib-editor editor.o dlibbuf.o  ../cslibInstall/cslib/cslib.a
+dog47:~/courses/datastructures/class/hw07/09-Efficiency-and-ADTs> ./dlib-editor
+*I brandon
+   b r a n d o n
+                ^
+*b
+   b r a n d o n
+              ^
+*b
+   b r a n d o n
+            ^
+*b
+   b r a n d o n
+          ^
+*b
+   b r a n d o n
+        ^
+*b
+   b r a n d o n
+      ^
+*b
+   b r a n d o n
+    ^
+*b
+   b r a n d o n
+  ^
+*b
+   b r a n d o n
+^
+*b
+Already at beginning bro!
+   b r a n d o n
+^
+*I brandon
+   b r a   b r a n d o n n d o n
+                ^
+*
+
