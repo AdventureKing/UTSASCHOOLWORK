@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">EventZilla</string>
+    <string name="title_eventitem_detail">EventItem Detail</string>
+    <string name="create_button">Create</string>
+    <string name="username_text">Username</string>
+    <string name="email_text">Email</string>
+    <string name="role_text">Role</string>
+    <string name="password_text">Password</string>
+    <string name="title_text">Create Account</string>
+    <string name="retype_password_text">Retype Password</string>
+    <string name="sunday">Sun</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="event_active">Active Events</string>
+    <string name="title_CreateEvent">Create Event</string>
+    <string-array name="spinner_array">
+        <item>Admin</item>
+        <item>Event Manager</item>
+        <item>Event Manager Assistant</item>
+        <item>Team Leader</item>
+        <item>Employee</item>
+    </string-array>
+    <string-array name="spinner_array2">
+        <item>test : Event Manager</item>
+    </string-array>
+</resources>

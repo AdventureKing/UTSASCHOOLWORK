@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_calendar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calendar_border_selector">
+
+
+    <TextView
+        android:id="@+id/grid_calendar_date"
+        android:padding="1dp"
+        android:layout_width="20dp"
+        android:layout_marginLeft=".4dp"
+        android:layout_marginTop=".4dp"
+        android:background="@drawable/calendar_textview_selector"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/calendar_event_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/grid_calendar_date"
+            android:layout_marginLeft=".4dp"
+            android:visibility="invisible"
+            android:background="#1BE2F1"></RelativeLayout>
+
+        <TextView
+            android:id="@+id/calendar_text_event_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/grid_calendar_date"
+            android:layout_toRightOf="@id/calendar_event_indicator"
+            android:visibility="invisible"
+            android:text="@string/event_active"
+            android:gravity="center|center_vertical"
+            android:textSize="8sp"/>
+
+
+
+</RelativeLayout>

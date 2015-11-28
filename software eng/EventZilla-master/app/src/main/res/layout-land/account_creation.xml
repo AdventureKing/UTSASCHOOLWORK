@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center"
+        android:background="@color/green_button_color"
+        style="@style/ThemeOverlay.AppCompat">
+
+        <TextView
+            android:id="@+id/evencreat_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_text"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear_layout_title">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/account_creation_linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/username_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/username_text_edit"
+            android:imeOptions="flagNoExtractUi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_toRightOf="@id/username_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_creation_linear_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_creation_linear_first"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/email_text_edit"
+            android:imeOptions="flagNoExtractUi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:layout_toRightOf="@id/email_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_creation_linear_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_creation_linear_second"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/role_text"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/role_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/role_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@id/role_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_creation_linear_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_creation_linear_third"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/password_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/password_text_edit"
+            android:imeOptions="flagNoExtractUi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_toRightOf="@id/password_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_creation_linear_fifth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_creation_linear_fourth"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/retype_password_text"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/retype_password_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/retype_password_text_edit"
+            android:imeOptions="flagNoExtractUi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_toRightOf="@id/retype_password_text"/>
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/create_account_button"
+            android:layout_below="@id/account_creation_linear_fifth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/create_button"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</ScrollView>
+    <ProgressBar
+        android:id="@+id/account_creation_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/user_send_message">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" Select User :"
+        android:id="@+id/sendMessage_toUserText" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendMessage_userSpinner"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/user_send_message_field"
+        android:shadowColor="@color/green_button_color"
+        android:layout_gravity="center_horizontal|top"
+        android:text="Enter Text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/send_messages_sendButton"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

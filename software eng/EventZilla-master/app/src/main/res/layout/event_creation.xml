@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:weightSum="1">
+
+
+
+    <LinearLayout
+        android:id="@+id/create_event_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/green_button_color"
+        style="@style/ThemeOverlay.AppCompat">
+
+        <TextView
+            android:id="@+id/event_creation_textView_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_CreateEvent"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/create_event_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:id="@+id/linear_event_title"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/EventName"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Event Name"
+                    />
+                <EditText
+                    android:id="@+id/eventNameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:capitalize="sentences"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:layout_toRightOf="@id/EventName"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_event_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@id/linear_event_title">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date"/>
+
+                <EditText
+                    android:id="@+id/event_creation_start_date_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ems="6"
+                    android:text="Start"
+                    android:focusableInTouchMode="false" />
+
+                <EditText
+                    android:id="@+id/event_creation_end_date_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ems="6"
+                    android:text="End"
+                    android:focusableInTouchMode="false"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_event_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@id/linear_event_date">
+
+                <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Time"/>
+
+
+                <EditText
+                    android:id="@+id/event_creation_start_time_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ems="5"
+                    android:text="Start"
+                    android:focusableInTouchMode="false"/>
+
+                <EditText
+                    android:id="@+id/event_creation_end_time_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ems="5"
+                    android:text="End"
+                    android:focusableInTouchMode="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_event_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@id/linear_event_time">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Location"/>
+
+                <EditText
+                    android:id="@+id/event_creation_location_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:singleLine="true"
+                    android:ems="10"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_event_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@id/linear_event_location">
+
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Description"/>
+
+                <EditText
+                    android:id="@+id/event_creation_description_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:capitalize="sentences"
+                    android:lines="10"
+                    android:ems="10"/>
+
+                </LinearLayout>
+
+            <Button
+                android:id="@+id/event_creation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:layout_below="@id/linear_event_description"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
