@@ -1,0 +1,75 @@
+//Brandon Snow Tfv024
+//comp org
+//hw1
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+//function define that defines what is printable 
+//aka returns 1 if printable
+#define PRINTABLE(c) ((c >= ' ' && c <= '~') ? 1 : 0)
+char *inputString(FILE* fp, size_t size);
+
+
+int main(int nargs, char *argv[])
+{
+	char *word;
+	int i=0;
+
+	//input is from the keyboard and starting length is 10
+	//if a user enters 6 it will 
+	word = inputString(stdin, 10);
+	//print out address 
+	printf("The address is %p : ",&word);
+	//print first 8 hex values 
+	for(i=0; i < 8; i++)
+	{
+		//print the first 8 hex numbers of the buffer contents each print is for 2 bytes
+		printf("%04X ", *(word + i));
+
+	}
+
+	for(i=0;i<strlen(word); i++)
+	{
+		//print the string contents for the user
+		if(PRINTABLE(word[i])) {	//Checks if character is printable
+				printf("%c ",*(word + i));
+			} else {
+		
+					printf("%c ", '.');
+				
+			} 
+	}
+	//print newline 
+	printf("\n");
+	//free allocated memory
+	free(word);
+
+}
+//takes input from the keyboard and returns the allocated input from the keyboard
+char *inputString(FILE* fp, size_t size){
+//The size is increased while the user doesnt hit the enter key
+
+    char *str;
+    int ch;
+    size_t len = 0;
+	//input string message
+	printf("Please Enter a String:");
+
+    str = realloc(NULL, sizeof(char)*size);//size is start size read in from the main
+	//if realloc fails
+    if(!str)return str;
+    while(EOF!=(ch=fgetc(fp)) && ch != '\n'){
+        str[len++]=ch;
+        if(len==size){
+            str = realloc(str, sizeof(char)*(size+=16));
+				//if fails
+            if(!str)return str;
+        }
+    }
+//stick null terminator at end
+    str[len++]='\0';
+	//return larger array
+    return realloc(str, sizeof(char)*len);
+}
