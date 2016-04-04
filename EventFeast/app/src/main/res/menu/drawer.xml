@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/feedsTab"
+            android:checked="false"
+            android:icon="@drawable/ic_local_library_black_24dp"
+            android:title="@string/feed" />
+
+        <item
+            android:id="@+id/my_experiences"
+            android:checked="false"
+            android:icon="@drawable/ic_star_black"
+            android:title="@string/My_experiences" />
+        <item
+            android:id="@+id/users"
+            android:checked="false"
+            android:icon="@drawable/ic_tag_faces_black_24dp"
+            android:title="@string/users" />
+        <item
+            android:id="@+id/search_event"
+            android:checked="false"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="@string/searchEvent" />
+
+        <item
+            android:id="@+id/activity_map"
+            android:checked="false"
+            android:icon="@drawable/ic_location_black_44x40"
+            android:title="Create New Event"
+            android:visible="false"/>
+        <item
+            android:id="@+id/logoutDrawer"
+            android:checked="false"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="@string/action_logout" />
+
+
+    </group>
+</menu>
