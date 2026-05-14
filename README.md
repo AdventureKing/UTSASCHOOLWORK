@@ -12,8 +12,7 @@ Current resume:
 
 
 
-Brandon Allen Snow
-13218 Hopkins Glade 	     San Antonio, TX 78249           (210) 376-9714          basnow2010@gmail.com
+Brandon Allen Snow	     San Antonio, TX 78249           (210) 376-9714          basnow2010@gmail.com
 LinkedIn: https://www.linkedin.com/pub/brandon-snow/b4/b92/43a
 
 OBJECTIVE: Seeking a developer position or a job in the field of computer science for your company
